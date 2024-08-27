@@ -1,2 +1,1 @@
-# ads4nb_2fr
-Repositório referente as aulas de ADS da segunda-feira
+Repositorio para guardar arquivos da aula de segunda
