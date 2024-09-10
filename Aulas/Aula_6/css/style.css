@@ -1,0 +1,73 @@
+.titulo{
+    /*Altera o tipo da fonte*/
+    font-family: Arial, impact, Courier, 'Times New Roman';
+
+    /*Permite Alterar o Tamanho da Fonte*/
+    font-size: 2em; /*em = 14px - Trabalha de acordo com a proporcao da pagina*/
+
+    /*Texto em Negrito*/
+    font-weight: bold;
+
+    /*Texto em Italico*/
+    font-style: italic;
+
+    /*Permite colocar sublinhado*/
+    text-decoration: underline overline double;
+
+    /*Permite Ajustar entre maiuscula e minuscula*/
+    text-transform: uppercase;
+
+    /*Permite colocar espacamento entre as fontes*/
+    letter-spacing: 0.2em;
+
+    /*Espacamento em Palavras*/
+    word-spacing: 0.2em;
+
+    /*Permite colorir o Texto*/
+    color: #f76060
+
+}
+
+.subtitle{
+    font-family: Arial, impact, Courier, 'Times New Roman';
+    font-size: 1.7em;
+    color: #55b7f0;
+    letter-spacing: 0.1em;
+}
+
+.text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 2em;
+    border: dotted 2px #f37272;
+    padding: 40px;
+    background-color: #ffdfdf;
+}
+
+.textp{
+    margin-bottom: 20px;
+}
+
+
+.text::first-letter{
+    font-weight: bold;
+    color: #e05656;
+    margin-left: 30px;
+}
+
+.text::first-line{
+    font-size: 1.2em;
+}
+
+.text::selection{
+    color: rgb(45, 199, 14);
+    background-color: black;
+}
+
+.pldestac{
+    font-weight: bold;
+    color: #213f91;
+    font-style: italic;
+}
