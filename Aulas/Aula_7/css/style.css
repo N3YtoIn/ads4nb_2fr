@@ -1,56 +1,61 @@
-/*Elimina os Espacamentos internos (padding) e Externos (margin)*/
+/* Elimina os espaçamentos internos (padding) e externos(margin) do body */
 *{
     margin: 0px;
     padding: 0px;
-
-    /*Permite desativar o crescimento de uma caixa por conta do padding*/
+    /* Permite desativar o crescimento de uma caixa por conta do padding*/
     box-sizing: border-box;
 }
 
 body{
-    background-image: linear-gradient(rgb(41, 40, 40), rgb(151, 151, 151));
+    background-image: linear-gradient(rgb(253, 253, 253), rgb(151, 151, 150));
 }
 
-/* Seção do Header*/
+/* SEÇÃO DO HEADER */
 header{
     width: 100%;
-    height: 500px;
-    background-color: #a646ff;
-
-    /*Coloca Imagem de fundo pelo CSS*/
+    height: 800px;
+    /* background-color: brown; */
+    /* Permite colocar uma foto de fundo pelo CSS */
     background-image: url(../img/graycode.jpg);
 
-    /*Faz a imagem não se repetir na tag*/
-    background-repeat: no-repeat ;
+    /* Permite configurar a repetição da imagem */
+    background-repeat: no-repeat;
 
-    /*Permite ajustar a posição da imagem*/
+    /* Permite ajustar a posição da imagem (vertical e horizontal (left top)) */
     background-position: center;
 
-    /*Permite ajustar o tamanho da imagem de acordo com o especo da tag vinculada*/
-    background-size: cover;
-} 
+    /* Permite ajustar o tamanho da imagem W x H */
+    /* background-size: 300px 300px; */
 
-/*Seção do Menu*/
-#menu{
-    width: 100%;
-    height: 80px;
-    background-color: #1f1f1f;
+    /* Permite ajustar o tamanho da imagem aplicando zoom para ela caber dentro do espaço (contain ou cover)*/
+    background-size: cover;
+
+    background-attachment: fixed;
 }
 
-/*Seção do Main (conteúdo)*/
+/* SEÇÃO DO MENU */
+#menu {
+    width: 100%;
+    height: 80px;
+    background-color: #1f1e1e;
+}
+
+/* SEÇÃO DO MAIN (CONTEÚDO) */
 main{
-    width: 1400px;
-
-    /*Configuracao para deiar o elemento HTML crescendo conforme o seus conteúdo*/
-    min-height: 1000px;   /*Altura Minima*/
-    height: auto;   /*Altura Automatica*/
-    overflow: hidden; /*Desabilita a barra de rolagem da DIV*/
-
+    width: 100%;
     background-color: #ffffff;
+    /*Configuração para deixar o elemento HTML crescendo conforme o seu conteúdo*/
+    min-height: 1000px; /*Altura minima*/
+    height: auto;       /*Altura automatica*/
+    overflow: hidden;   /*Desabilita a barra de rolagem da DIV*/
 
-    /*Centraliza qualquer objeto no navegador*/
+    /* background-color: aquamarine; */
+
+    /* Permite centralizar qualquer objeto no navegador */
     margin-left: auto;
     margin-right: auto;
+
+    /* margin: 0 auto 0 auto; */
 }
 
 .section-titulo{
@@ -64,208 +69,273 @@ main{
     text-transform: uppercase;
 }
 
-.section-titulo{
+.section-subtitulo{
     font-size: 1.8em;
     text-transform: capitalize;
 }
 
 .texto-padrao{
-    font-family: Verdana;
-    font-size: 1.4em;
+    font-family: verdana;
+    font-size: 1.2em;
+    text-align: left;
     width: 100%;
     min-height: 100px;
     height: auto;
     overflow: hidden;
-    background-color: bisque;
     line-height: 1.5;
-    text-align: justify;
-    padding: 17px;
-}
-/*Secao Quem Somos*/
-#quem-somos{
-    width: 1400px;
-    height: 500px;
-    background-color: bisque;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
 }
 
-/*Compartilhar Conteudo de Classe no CSS*/
+figure, img{
+    width: 100%;
+    height: 100%;
+}
+
+/* SEÇÃO QUEM SOMOS */
+#quem-somos, #promocao{
+    width: 1400px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.imagem-quem-somos{
+    height: 80%;
+    margin: auto;
+}
+
+/* Compartilhar conteúdo de classe no CSS */
 
 
 .imagem-loja, .texto-quem-somos, .unidades-loja{
     width: 30%;
     height: 450px;
-    background-color: #9938f5;
     float: left;
 }
 
 .texto-quem-somos{
     width: 35%;
-    background-color: red;
 }
 
 .unidades-loja{
     width: 35%;
-    background-color: violet;
 }
 
 .caixa-unidades{
     width: 100%;
     height: 45%;
     margin-bottom: 20px;
-    background-color: cadetblue;
 }
-/*Secao Promocoes Produtos*/
 
+.foto-unidade, .endereco-unidade{
+    width: 45%;
+    height: 100%;
+    margin-right: 20px;
+    float: left;
+}
 
-/*Seção dos Produtos*/
-#produtos{
+/* SEÇÃO DE PROMOÇÃO DA SEMANA */
+#promocao{
+    height: 350px;
+}
+
+.caixa-promocao{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(44, 44, 44);
+    /* border: solid 2px #1f1e1e; */
+    float: left;
+    margin-right: 80px;
+    border-radius: 50%; /*Permite colocar bordas arredondadas em um objeto*/
+}
+
+.icone-promocao{
+    margin: auto;
+    display: block;
+    transform: scale(0.6);
+}
+
+.caixa-promocao:hover{
+    background-color: #ff8308;
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+/* SEÇÃO BANNER */
+#banner{
     width: 100%;
-    min-height: 1000px;
-    height: auto;
-    overflow: hidden;
+    height: 600px;
+    background-image: url(../img/fundo02.jpg);
+
+    /* Permite configurar a repetição da imagem */
+    background-repeat: no-repeat;
+
+    /* Permite ajustar a posição da imagem (vertical e horizontal (left top)) */
+    background-position: center;
+
+    /* Permite ajustar o tamanho da imagem W x H */
+    /* background-size: 300px 300px; */
+
+    /* Permite ajustar o tamanho da imagem aplicando zoom para ela caber dentro do espaço (contain ou cover)*/
+    background-size: cover;
+
+    /* Permite fixar a imagem no fundo criando um efeito 3d na rolagem da página */
+    background-attachment: fixed;
+}
+
+/* #camada-transparente{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 237, 74,70%);
+    backdrop-filter: blur( 10px );
+} */
+
+/* SEÇÃO DE PRODUTOS */
+#produtos{
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    /*Configuração para deixar o elemento HTML crescendo conforme o seu conteúdo*/
+    min-height: 1000px; /*Altura minima*/
+    height: auto;       /*Altura automatica*/
+    overflow: hidden;   /*Desabilita a barra de rolagem da DIV*/
+    /* background-color: coral; */
     padding: 30px;
 
+    /*OPÇÃO PARA CRIAR CARDS UTILIZANDO O FLEX BOX*/
+        /* Permite ativar o recurso da utilização do FLEX */
+        /* display: flex; */
 
-    /*OPCAO PARA CRIACAO DE CARDS UTILIZANDO O FLEXBOX
-    /*Permite a criacao do Recurso FLEX*/
-    /*display: flex;*/
+        /* Permite escolher a forma de alinhamento dos elementos (Column ou Row) */
+        /* flex-direction: row; */
 
-    /*Permite escolher a forma de alinhamento dos elementos*/
-    /*flex-direction: row;*/
-    
-    /*Permite ativar a quebra de linha*/
-    /*flex-wrap: wrap;*/
+        /* Permite ativar a quebra de linhas */
+        /* flex-wrap: wrap; */
 
-    /*Espacamento entre os elementos*/
-    /*gap: 80px 103px;*/
+        /* Espaçamento entre os elementos (inferior e direito) */
+        /* gap: 150px 80px; */
 
-    /*OPCAO PARA CRIAR CARDS UTILIZANDO O GRID*/
-    /*Permite ativar a opcao GRID*/
+    /* OPÇÃO PARA CRIAR CARDS UTILIZANDO O GRID */
+    /* Permite ativar a opção do GRID */
     display: grid;
 
-    /*Permite definir a quanidade e largura dos elementos*/
+    /* Permite definir a quantidade e largura dos elementos  */
     grid-template-columns: 350px 350px 350px;
 
-    /*Permite criar espacos entre os elementos (coluna e linha)*/
+    /* Permite criar espaços entre os elementos (coluna e linha) */
     column-gap: 80px;
-    row-gap: 80px;
+    row-gap: 150px;
+
 }
 
 .card-produto{
-    /*width: 350px;*/
-    height: 550px;
-    background-color: #ffffff;
+    /* width: 350px; */
+    height: 450px;
+    /* background-color: cadetblue; */
 
-    /*Permite alinhar elementos na horizontal*/
-    /*float: left;*/
+    /* Permite alinhar elementos na horizontal (é a primeira forma de alinhamento de objetos) */
+    /* float: left; */
 
-    /*Permite definir o espacamento entre os cards*/
-    /*margin-right: 40px;*/
-    margin-bottom: 20px;
-    border-radius: 20px;
+    /* Permite aplicar espaçamento entre as caixas */
+    /* margin-right: 80px; */
+    /* margin-bottom: 60px; */
 
-    /*Altera o Sombreamento Externo da Imagem*/
-    box-shadow: 6px 3px 15px #1f1f1f;
+    box-shadow: 10px 10px 10px #b1afaf;
 }
 
 .card-produto h2{
     width: 100%;
     height: 50px;
-    background-color: #202020ec;
-    color: #fcfcfc;
+    background-color: #1f1e1e;
+    color: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5em;
     text-align: center;
     padding-top: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-
-    text-align: center;
 }
 
 .card-produto figure{
     width: 80%;
-    height: 250px;
-    background-color: #ffffff;
+    height: 200px;
+    /* background-color: aquamarine; */
     margin-left: auto;
     margin-right: auto;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
 }
 
-.card-produto figure img {
-    width: 100%;
+.card-produto figure img{
+    display: block; /*Precisa ser colocado para conseguir alinhar a imagem no centro*/
+    width: 80%;
     height: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .card-produto p{
-    width: 80%;
+    width: 90%;
     height: 80px;
-
+    /* background-color: burlywood; */
     margin-left: auto;
     margin-right: auto;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.8em;
-    text-align: justify;
+    text-align: center;
     line-height: 1.5;
     padding-top: 5px;
 }
-
 .valor-antigo, .valor-atual{
-    display: block; /*Transforma a TAG SPAN em um bloco de contéudo, assim podemos trabalhar com tamanho, altura e alinhamento*/
-    width: 80%;
-    height: 30px;
-    text-align: justify;
+    /*Transforma a tag span em um bloco de conteúdo, assim podemos trabalhar com tamanho, altura e alinhamento*/
+    display: block; 
+    width: 90%;
+    height: 20px;
+    /* background-color: cornflowerblue; */
+    font-family: arial;
+    font-size: 0.8em;
+    color: darkgrey;
     text-decoration: line-through;
-    font-size: 0.9em;
-    color: rgba(0, 0, 0, 0.514);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: auto;
     margin-right: auto;
 }
 
 .valor-atual{
     font-size: 1.2em;
-    color: rgb(245, 60, 36);
-    font-weight: bold;
+    color: #000000;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .comprar{
-    width: 100px;
+    width: 130px;
     height: 40px;
+    background-color: rgb(34, 67, 0);
     margin-left: auto;
     margin-right: auto;
-    background-color: #9938f5;
-    
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #ffffff;
-    font-size: 1em;
-    font-weight: bold;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
     text-align: center;
-    padding-top: 20px;
-    /*Arrendonda as bordas da caixa do objeto*/
+    color: #ffffff;
+    padding-top: 15px;
+    /*Permite arredondar os cantos de um objeto*/
     border-radius: 30px;
 }
 
 .comprar:hover{
     cursor: pointer;
-    background-color: #c089f3;
-    transition: 0.5s;
+    background-color: rgb(67, 132, 3);
+    transition: 1s;
 }
 
-/*Secao Contatos*/
 
-/*Seção do Footer*/
+/* SEÇÃO DO FOOTER */
 footer{
     width: 100%;
-    height: 30px;
-    background-color: #1f1f1f;
+    height: 50px;
+    background-color: #1f1e1e;
 }
-
-
