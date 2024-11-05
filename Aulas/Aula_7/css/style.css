@@ -10,6 +10,12 @@ body{
     background-image: linear-gradient(rgb(253, 253, 253), rgb(151, 151, 150));
 }
 
+/* Formatação para links novos e links visitados */
+a:link, a:visited{
+    color: #ffffff;
+    text-decoration: none;
+}
+
 /* SEÇÃO DO HEADER */
 header{
     width: 100%;
@@ -38,6 +44,41 @@ header{
     width: 100%;
     height: 80px;
     background-color: #1f1e1e;
+    /* Propriedades para travar o posicionamento do menu e garantir que ele fique acima de outros elementos */
+    position: fixed;
+    z-index: 999;
+
+
+}
+
+#menu ul{
+    width: 50%;
+    height: inherit; /* inherit - Serve para herdar o valor do elemento pai*/
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu ul li{
+    width: 25%;
+    height: inherit;
+    /* Permite alterar o tipo de marcador da lista */
+    list-style: none;
+    float: left; /*Para alinhar os itens da lista de forma horizontal (mas poderia ser grid ou flex)*/
+    font-family: arial;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 25px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+#menu ul li:hover{
+    cursor: pointer;
+    background-color: #ff8308;
+    transition: 1s;
 }
 
 /* SEÇÃO DO MAIN (CONTEÚDO) */
@@ -143,7 +184,6 @@ figure, img{
 #promocao{
     height: 350px;
 }
-
 .caixa-promocao{
     width: 250px;
     height: 250px;
@@ -153,18 +193,26 @@ figure, img{
     margin-right: 80px;
     border-radius: 50%; /*Permite colocar bordas arredondadas em um objeto*/
 }
-
 .icone-promocao{
     margin: auto;
     display: block;
     transform: scale(0.6);
 }
-
 .caixa-promocao:hover{
     background-color: #ff8308;
     cursor: pointer;
     transition: 1s;
     transform: scale(1.1);
+}
+
+.caixa-promocao figure figcaption{
+    width: 100%;
+    height: 50px;
+    font-family: verdana;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
 }
 
 /* SEÇÃO BANNER */
