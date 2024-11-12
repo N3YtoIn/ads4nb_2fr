@@ -1,0 +1,56 @@
+/* PAGE */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* Versão do site para Desktop a partir de 800 de largura mínima */
+@media screen and (min-device-width:800px) {
+    
+    /* Área do Header */
+    header{
+        width: 100%;
+        height: 100px;
+        background-color: black;
+    }
+
+    /* Área do Main */
+    main{
+        width: 100%;
+        min-height: 500px;
+        height: auto;
+        overflow: hidden;
+        background-color: bisque;
+    }
+    /* SectionCards */
+    #produto{
+        width: 90%;
+        min-height: 1000px;
+        height: auto;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: chocolate;
+    }
+    .card{
+        width: 300px;
+        height: 500px;
+        background-color: aquamarine;
+        float: left;
+        margin: 50px;
+    }
+
+    /* Área do Footer */
+    footer{
+        width: 100%;
+        height: 50px;
+        background-color: black;
+    }
+
+}
+
+/* Versão do site para Celulares a partir de 799 de largura máxima */
+@media screen and (max-device-width:799px) {
+
+}
